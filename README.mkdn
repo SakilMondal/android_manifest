@@ -1,0 +1,62 @@
+
+LineageOS 18.0 for Whyred
+=======================
+
+Current Status
+--------------
+
+What's working ?
+ - Boots
+ - RIL (Calls, SMS, Data, VoLTE)
+ - Wi-Fi
+ - Hotspot
+ - Bluetooth
+ - Fingerprint Sensor
+ - Video Playback
+ - Camera
+ - Flash
+ - Audio
+ - Sensors
+ - LED
+ - GPS
+
+Not Working / Not Tested ?
+ - SELinux Enforcing
+ - Encryption
+ - Carrier Video Calling
+
+Download
+--------
+
+[Here](https://t.me/SakilMondalsUpdates)
+
+Build Instructions
+------------------
+Create a build directory
+
+	mkdir lineage-18.0
+	cd lineage-18.0
+
+Initialize your local repository using the LineageOS trees, use a command like this:
+
+    repo init -u git://github.com/LineageOS/android.git -b lineage-18.0
+
+Then:
+
+    mkdir .repo/local_manifests
+    wget -O .repo/local_manifests/manifest.xml 'https://raw.githubusercontent.com/SakilMondal/android_manifest/lineage-18.0/MSM8998.xml'
+
+Then to sync up:
+
+    repo sync -c --force-sync
+
+Now start the build...
+
+```bash
+# Go to the root of the source tree...
+
+# ...and run to prepare our devices list
+ . build/envsetup.sh
+ lunch lineage_whyred-userdebug
+ make bacon -j$(nproc --all) | tee log.txt
+```
