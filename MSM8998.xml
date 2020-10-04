@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="git"
+          fetch="https://github.com/" />
+
+        <project name="LineageOS/android_external_bson" path="external/bson" remote="git" revision="lineage-17.1" />
+        <project name="LineageOS/android_system_qcom" path="system/qcom"  remote="git" revision="lineage-17.1" />
+        <project name="LineageOS/android_hardware_sony_timekeep" path="hardware/sony/timekeep"  remote="git" revision="lineage-17.1" />
+        <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat"  remote="git" revision="lineage-17.1" />
+
+        <!-- BRINGUP: LOS Repos -->
+        <project path="external/connectivity" name="LineageOS/android_external_connectivity" />
+        <project path="hardware/qcom-caf/common" name="LineageOS/android_hardware_qcom-caf_common" groups="qcom,pdk-qcom" >
+          <!-- add guard for AOSP hardware/qcom dir -->
+          <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+          <!-- add guards for CAF repositories -->
+          <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+          <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+		  </project>
+        <project path="hardware/qcom-caf/bt" name="LineageOS/android_hardware_qcom_bt" groups="qcom,pdk-qcom" revision="lineage-18.0-caf" />
+        <project path="hardware/qcom-caf/wlan" name="LineageOS/android_hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" revision="lineage-18.0-caf" />
+        <project path="hardware/qcom-caf/thermal" name="LineageOS/android_hardware_qcom_thermal" groups="qcom,pdk-qcom" remote="git" revision="lineage-17.1" />
+        <project path="hardware/qcom-caf/vr" name="LineageOS/android_hardware_qcom_vr" groups="qcom,pdk-qcom" remote="git" revision="lineage-17.1" />
+        <project path="hardware/qcom-caf/msm8998/audio" name="LineageOS/android_hardware_qcom_audio" remote="github" revision="lineage-18.0-caf-msm8998" />
+        <project path="hardware/qcom-caf/msm8998/display" name="LineageOS/android_hardware_qcom_display" remote="github" revision="lineage-18.0-caf-msm8998" />
+        <project path="hardware/qcom-caf/msm8998/media" name="LineageOS/android_hardware_qcom_media" remote="github" revision="lineage-18.0-caf-msm8998" />
+
+        <project path="vendor/qcom/opensource/audio" name="LineageOS/android_vendor_qcom_opensource_audio" groups="qcom,pdk-qcom" />
+        <project path="vendor/qcom/opensource/cryptfs_hw" name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" groups="qcom,pdk-qcom" />
+        <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" />
+        <project path="vendor/qcom/opensource/dataservices" name="LineageOS/android_vendor_qcom_opensource_dataservices" />
+        <project path="vendor/qcom/opensource/interfaces" name="LineageOS/android_vendor_qcom_opensource_interfaces" />
+        <project path="vendor/qcom/opensource/power" name="LineageOS/android_vendor_qcom_opensource_power" />
+        <project path="vendor/qcom/opensource/thermal-engine" name="LineageOS/android_vendor_qcom_opensource_thermal-engine" groups="qcom,pdk-qcom" remote="git" revision="lineage-17.1" />
+        <project path="vendor/qcom/opensource/vibrator" name="LineageOS/android_vendor_qcom_opensource_vibrator" groups="qcom,pdk-qcom" />
+
+        <remove-project name="LineageOS/android_external_exfatprogs" />
+        <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+        <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+        <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+        <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+
+        <project path="external/exfat" name="LineageOS/android_external_exfat" remote="git" revision="lineage-17.1" />
+
+        <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" />
+        <project path="system/tools/dtbtool" name="LineageOS/android_system_tools_dtbtool" remote="git" revision="lineage-17.1" />
+        <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,darwin,arm" clone-depth="1" remote="git" revision="lineage-17.1" />
+        <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" groups="pdk,darwin,arm" clone-depth="1" remote="git" revision="lineage-17.1" />
+        <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" groups="pdk,linux,arm" clone-depth="1" remote="git" revision="lineage-17.1" />
+        <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" remote="git" revision="lineage-17.1" />
+
+</manifest>
