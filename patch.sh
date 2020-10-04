@@ -90,3 +90,9 @@ TOP=${PWD}
 
 ## vendor/qcom/opensource/vibrator
 ./vendor/lineage/build/tools/repopick.py 286939 286940
+
+## hardware/ril
+./vendor/lineage/build/tools/repopick.py 286832 287533-287536
+
+## vendor/codeaurora/telephony
+./vendor/lineage/build/tools/repopick.py 288320
