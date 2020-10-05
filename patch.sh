@@ -10,17 +10,12 @@ TOP=${PWD}
 
 ## Build Bringup
 ./vendor/lineage/build/tools/repopick.py -t eleven-build-warnings
-./vendor/lineage/build/tools/repopick.py -t eleven-build
-./vendor/lineage/build/tools/repopick.py -t eleven-build-bringup
 
 ## Art
 ./vendor/lineage/build/tools/repopick.py -P art -f 286185
 
 ## bionic
-./vendor/lineage/build/tools/repopick.py -P bionic -f 286301-286305
-
-## bootable/recovery
-./vendor/lineage/build/tools/repopick.py -P  bootable/recovery -f 286438 286351
+./vendor/lineage/build/tools/repopick.py -P bionic -f 286303-286305
 
 ## Build/Make
 ./vendor/lineage/build/tools/repopick.py -f 256500 286189 286650 287090 288021-288028
@@ -42,7 +37,7 @@ TOP=${PWD}
 ./vendor/lineage/build/tools/repopick.py -P frameworks/native -f 287618
 
 ## frameworks/opt/telephony
-./vendor/lineage/build/tools/repopick.py 288106 288536 288537
+./vendor/lineage/build/tools/repopick.py -P frameworks/opt/telephony 288106 288536 288537
 
 ## hardware/libhardware
 ./vendor/lineage/build/tools/repopick.py 287794
@@ -57,13 +52,10 @@ TOP=${PWD}
 ./vendor/lineage/build/tools/repopick.py -t eleven-theme_picker
 
 ## packages/services/Telecomm
-./vendor/lineage/build/tools/repopick.py 288107
+./vendor/lineage/build/tools/repopick.py -P packages/services/Telecomm 288107
 
 ## system/core
 ./vendor/lineage/build/tools/repopick.py -f 286236
-
-## system/tools/mkbootimg
-./vendor/lineage/build/tools/repopick.py -P system/tools/mkbootimg -f 287107
 
 ## system/vold
 ./vendor/lineage/build/tools/repopick.py -t eleven-vold
@@ -72,10 +64,7 @@ TOP=${PWD}
 ./vendor/lineage/build/tools/repopick.py -f 287010
 
 ## packages/apps/LineageParts
-./vendor/lineage/build/tools/repopick.py 286435 286449 286412
-
-## Lineage SDK
-./vendor/lineage/build/tools/repopick.py -t eleven-sdk-bringup
+./vendor/lineage/build/tools/repopick.py 286435 286449
 
 ## More picks for Lineage SDK bringup
 ./vendor/lineage/build/tools/repopick.py -t eleven-display-rotation
