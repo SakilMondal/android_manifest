@@ -14,9 +14,6 @@ TOP=${PWD}
 ## bionic
 ./vendor/lineage/build/tools/repopick.py -P bionic -f 286303-286305
 
-## build/make
-./vendor/lineage/build/tools/repopick.py 286207
-
 ## device/lineage/sepolicy
 ./vendor/lineage/build/tools/repopick.py 287771
 
@@ -29,9 +26,6 @@ TOP=${PWD}
 
 ## frameworks/opt/telephony
 ./vendor/lineage/build/tools/repopick.py -P frameworks/opt/telephony 288106 288536 288537
-
-## hardware/libhardware
-./vendor/lineage/build/tools/repopick.py 287794
 
 ## hardware/qcom-caf/wlan
 ./vendor/lineage/build/tools/repopick.py 287117-287120 287123-287126
@@ -61,18 +55,8 @@ TOP=${PWD}
 ## packages/apps/LineageParts
 ./vendor/lineage/build/tools/repopick.py 286435 286449
 
-## Linked Volumes
-./vendor/lineage/build/tools/repopick.py -t eleven-linked-volumes
-
-## Statusbar
-./vendor/lineage/build/tools/repopick.py 287719
-./vendor/lineage/build/tools/repopick.py -t eleven-clock-customizations
-
 ## vendor/qcom/opensource/power
-./vendor/lineage/build/tools/repopick.py -f 287142-287190
-
-## vendor/qcom/opensource/data-ipa-cfg-mgr
-./vendor/lineage/build/tools/repopick.py 287133-287134
+./vendor/lineage/build/tools/repopick.py -f 287142-287190 288382
 
 ## vendor/qcom/opensource/vibrator
 ./vendor/lineage/build/tools/repopick.py 286939 286940
@@ -82,3 +66,18 @@ TOP=${PWD}
 
 ## vendor/codeaurora/telephony
 ./vendor/lineage/build/tools/repopick.py 288320
+
+## Expanded volume panel
+./vendor/lineage/build/tools/repopick.py -t 11-expanded-volbar
+
+## Eleven Tiles
+./vendor/lineage/build/tools/repopick.py -t eleven-tiles 
+
+## Eleven qcom wfd
+./vendor/lineage/build/tools/repopick.py -t eleven-qcom-wfd 
+
+## Eleven adaptive icons
+./vendor/lineage/build/tools/repopick.py -t eleven-adaptive-icons
+
+## Eleven dark
+./vendor/lineage/build/tools/repopick.py -t eleven-dark
