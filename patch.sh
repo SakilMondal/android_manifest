@@ -26,9 +26,6 @@ TOP=${PWD}
 ## frameworks/opt/telephony
 ./vendor/lineage/build/tools/repopick.py -P frameworks/opt/telephony 288106 288536 288537
 
-## hardware/qcom-caf/wlan
-./vendor/lineage/build/tools/repopick.py 287117-287120 287123-287126
-
 ## packages/apps/SetupWizard
 ./vendor/lineage/build/tools/repopick.py -P packages/apps/SetupWizard 287699-287701
 
@@ -55,5 +52,12 @@ TOP=${PWD}
 ## Eleven qcom wfd
 ./vendor/lineage/build/tools/repopick.py -t eleven-qcom-wfd 
 
-## frameworks/base
-./vendor/lineage/build/tools/repopick.py 289195
+## Eleven qti bt stack
+./vendor/lineage/build/tools/repopick.py -P system/bt 286696-286703 287040
+./vendor/lineage/build/tools/repopick.py -P frameworks_base 286704-286732 286733-286737 288143-288145
+./vendor/lineage/build/tools/repopick.py -P vendor/qcom/opensource/commonsys/packages/apps/Bluetooth 287064-287069 287070
+./vendor/lineage/build/tools/repopick.py -P vendor/qcom/opensource/commonsys/system/bt 287071
+./vendor/lineage/build/tools/repopick.py -P packages/apps/Bluetooth 287072-287075
+./vendor/lineage/build/tools/repopick.py -P packages/services/Telecomm 287062-287063
+./vendor/lineage/build/tools/repopick.py -P packages/apps/Settings 287076-287081 287196 287082-287084 289296
+./vendor/lineage/build/tools/repopick.py -P vendor/qcom/opensource/interfaces 287030
