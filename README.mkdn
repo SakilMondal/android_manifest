@@ -1,0 +1,63 @@
+
+AospExtended Eleven for Whyred
+=======================
+
+Current Status
+--------------
+
+What's working ?
+ - Boots
+ - RIL (Calls, SMS, Data, VoLTE)
+ - Wi-Fi
+ - Hotspot
+ - Bluetooth
+ - Fingerprint Sensor
+ - Video Playback
+ - Camera
+ - Flash
+ - Audio
+ - Sensors
+ - LED
+ - GPS
+ - SELinux Enforcing
+
+Not Working / Not Tested ?
+ - Encryption
+ - Carrier Video Calling
+ - Wifi Display
+ - LDAC Audio
+
+Download
+--------
+
+[Here](https://t.me/SakilMondalsUpdates)
+
+Build Instructions
+------------------
+Create a build directory
+
+	mkdir aex
+	cd aex
+
+Initialize your local repository using the AospExtended trees, use a command like this:
+
+    repo init -u git://github.com/AospExtended/manifest.git -b 11.x
+
+Then:
+
+    git clone https://github.com/SakilMondal/android_manifest.git -b 11.x .repo/local_manifests
+
+Then to sync up:
+
+    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
+Now start the build...
+
+```bash
+# Go to the root of the source tree...
+
+# ...and run to prepare our devices list
+ . build/envsetup.sh
+ lunch aosp_whyred-userdebug
+ make aex -j$(nproc --all) | tee log.txt
+```
