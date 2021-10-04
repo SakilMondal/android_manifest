@@ -1,5 +1,5 @@
 
-LineageOS 18.0 for Whyred
+ForkLineageOS 18.1 for Whyred
 =======================
 
 Current Status
@@ -19,11 +19,13 @@ What's working ?
  - Sensors
  - LED
  - GPS
-
-Not Working / Not Tested ?
- - SELinux Enforcing
  - Encryption
  - Carrier Video Calling
+ - Wifi Display
+ - SELinux Enforcing
+
+Not Working / Not Tested ?
+ - LDAC Audio
 
 Download
 --------
@@ -34,21 +36,21 @@ Build Instructions
 ------------------
 Create a build directory
 
-	mkdir lineage-18.0
-	cd lineage-18.0
+	mkdir flos
+	cd flos
 
 Initialize your local repository using the LineageOS trees, use a command like this:
 
-    repo init -u git://github.com/LineageOS/android.git -b lineage-18.0
+    repo init -u git://github.com/ForkLineageOS/android.git -b lineage-18.1
 
 Then:
 
     mkdir .repo/local_manifests
-    wget -O .repo/local_manifests/manifest.xml 'https://raw.githubusercontent.com/SakilMondal/android_manifest/lineage-18.0/MSM8998.xml'
+    wget -O .repo/local_manifests/manifest.xml 'https://raw.githubusercontent.com/SakilMondal/android_manifest/lineage-18.1/MSM8998.xml'
 
 Then to sync up:
 
-    repo sync -c --force-sync
+    repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 
 Now start the build...
 
