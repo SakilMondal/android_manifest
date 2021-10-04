@@ -19,12 +19,12 @@ What's working ?
  - Sensors
  - LED
  - GPS
- - SELinux Enforcing
-
-Not Working / Not Tested ?
  - Encryption
  - Carrier Video Calling
  - Wifi Display
+ - SELinux Enforcing
+
+Not Working / Not Tested ?
  - LDAC Audio
 
 Download

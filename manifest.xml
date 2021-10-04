@@ -1,10 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-        <remove-project name="platform_frameworks_av" />
-        <remove-project name="platform/system/media" />
-
-        <project path="frameworks/av" name="SakilMondal/frameworks_av" remote="github" revision="11.x" />
-        <project path="system/media" name="SakilMondal/platform_system_media" remote="github" revision="11.x" />
-
 </manifest>
